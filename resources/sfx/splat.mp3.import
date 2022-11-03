@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/splat.mp3-d9b168a40360e3af08d2726a1ddc82e3.mp3str"
+
+[deps]
+
+source_file="res://resources/sfx/splat.mp3"
+dest_files=[ "res://.import/splat.mp3-d9b168a40360e3af08d2726a1ddc82e3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

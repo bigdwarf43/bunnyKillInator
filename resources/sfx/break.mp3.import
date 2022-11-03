@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/break.mp3-c84cb566d61843d369cb5ecc9fdff0a7.mp3str"
+
+[deps]
+
+source_file="res://resources/sfx/break.mp3"
+dest_files=[ "res://.import/break.mp3-c84cb566d61843d369cb5ecc9fdff0a7.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

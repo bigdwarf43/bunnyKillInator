@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/pixelPerfectPrologue.mp3-6b5b58d52c4a73958a2aa7f94e51a7f8.mp3str"
+
+[deps]
+
+source_file="res://resources/music/pixelPerfectPrologue.mp3"
+dest_files=[ "res://.import/pixelPerfectPrologue.mp3-6b5b58d52c4a73958a2aa7f94e51a7f8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,357 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Sprites/prologue/bunny 3.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/prologue/bunny 5.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/prologue/tort2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/prologue/bunny 4.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/prologue/tort.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/prologue/bunny 2.png" type="Texture" id=6]
+[ext_resource path="res://resources/fonts/winkleFont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Sprites/prologue/tort3.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/prologue/bunny 1.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/spikeTortoise.png" type="Texture" id=10]
+[ext_resource path="res://Scripts/prologue.gd" type="Script" id=11]
+[ext_resource path="res://Scenes/shakeCamera.tscn" type="PackedScene" id=12]
+[ext_resource path="res://resources/music/pixelPerfectPrologue.mp3" type="AudioStream" id=13]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "blink"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="prologue" type="Node2D"]
+script = ExtResource( 11 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -22.0
+margin_top = -23.0
+margin_right = 1915.0
+margin_bottom = 1137.0
+
+[node name="Scene1" type="Node2D" parent="."]
+visible = false
+
+[node name="Bunny1" type="Sprite" parent="Scene1"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 961, 439 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="RichTextLabel" parent="Scene1"]
+margin_left = 125.0
+margin_top = 769.0
+margin_right = 1837.0
+margin_bottom = 979.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+bbcode_text = "' Momma always told me that i was a cute little bunny ' "
+text = "' Momma always told me that i was a cute little bunny ' "
+
+[node name="Scene2" type="Node2D" parent="."]
+visible = false
+
+[node name="Bunny1" type="Sprite" parent="Scene2"]
+position = Vector2( 961, 439 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 6 )
+
+[node name="Label" type="RichTextLabel" parent="Scene2"]
+margin_left = 125.0
+margin_top = 769.0
+margin_right = 1837.0
+margin_bottom = 979.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+
+[node name="Scene3" type="Node2D" parent="."]
+visible = false
+
+[node name="Bunny1" type="Sprite" parent="Scene3"]
+position = Vector2( 961, 413 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
+
+[node name="Label" type="RichTextLabel" parent="Scene3"]
+margin_left = 125.0
+margin_top = 769.0
+margin_right = 1837.0
+margin_bottom = 979.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+
+[node name="Scene4" type="Node2D" parent="."]
+visible = false
+
+[node name="Bunny1" type="Sprite" parent="Scene4"]
+position = Vector2( 961, 413 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="RichTextLabel" parent="Scene4"]
+margin_left = 125.0
+margin_top = 769.0
+margin_right = 1837.0
+margin_bottom = 1118.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+
+[node name="Scene5" type="Node2D" parent="."]
+visible = false
+
+[node name="Bunny1" type="Sprite" parent="Scene5"]
+position = Vector2( 936, 421 )
+scale = Vector2( 0.34248, 0.322109 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="RichTextLabel" parent="Scene5"]
+margin_left = 125.0
+margin_top = 798.0
+margin_right = 1837.0
+margin_bottom = 1008.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+
+[node name="Scene6" type="Node2D" parent="."]
+visible = false
+
+[node name="Bunny1" type="Sprite" parent="Scene6"]
+position = Vector2( 936, 421 )
+scale = Vector2( 0.34248, 0.322109 )
+texture = ExtResource( 3 )
+
+[node name="Label2" type="Label" parent="Scene6/Bunny1"]
+margin_left = -1691.0
+margin_top = -1059.0
+margin_right = -836.0
+margin_bottom = -812.0
+rect_scale = Vector2( 1.197, 1.512 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Extreme rage"
+
+[node name="Line2D" type="Line2D" parent="Scene6/Bunny1"]
+position = Vector2( -2733, -1307.01 )
+scale = Vector2( 2.91987, 3.10454 )
+points = PoolVector2Array( 562, 141, 604.856, 154.227, 623.331, 159.929, 643, 166, 666, 179, 677, 190, 689, 202, 709, 227, 752, 309 )
+width = 4.0
+default_color = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="RichTextLabel" parent="Scene6"]
+margin_left = 125.0
+margin_top = 703.0
+margin_right = 1837.0
+margin_bottom = 1135.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+
+[node name="Scene7" type="Node2D" parent="."]
+visible = false
+
+[node name="Bunny1" type="Sprite" parent="Scene7"]
+position = Vector2( 936, 348 )
+scale = Vector2( 0.34248, 0.322109 )
+texture = ExtResource( 8 )
+
+[node name="Label" type="RichTextLabel" parent="Scene7"]
+margin_left = 115.0
+margin_top = 625.0
+margin_right = 1827.0
+margin_bottom = 1121.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+
+[node name="Scene8" type="Node2D" parent="."]
+visible = false
+
+[node name="Bunny1" type="Sprite" parent="Scene8"]
+position = Vector2( 938, 469 )
+scale = Vector2( 0.34248, 0.322109 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="RichTextLabel" parent="Scene8"]
+margin_left = 372.0
+margin_top = 933.0
+margin_right = 2084.0
+margin_bottom = 1143.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+
+[node name="Scene9" type="Node2D" parent="."]
+visible = false
+
+[node name="Bunny1" type="Sprite" parent="Scene9"]
+visible = false
+position = Vector2( 927, 619 )
+scale = Vector2( 0.34248, 0.322109 )
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="Scene9"]
+visible = false
+margin_left = 78.0
+margin_top = 855.0
+margin_right = 1790.0
+margin_bottom = 1065.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "THE BUNNYKILLINATOR!"
+align = 1
+autowrap = true
+
+[node name="spike" type="Label" parent="Scene9"]
+visible = false
+margin_left = 1405.0
+margin_top = 284.0
+margin_right = 2010.0
+margin_bottom = 380.0
+rect_scale = Vector2( 0.735, 0.737 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Pointy spikes"
+
+[node name="Line2D" type="Line2D" parent="Scene9/spike"]
+points = PoolVector2Array( -236.735, 181.818, -13.6055, 63.772 )
+default_color = Color( 0, 0, 0, 1 )
+
+[node name="shell" type="Label" parent="Scene9"]
+visible = false
+margin_left = 253.0
+margin_top = 155.0
+margin_right = 970.0
+margin_bottom = 350.0
+rect_scale = Vector2( 0.788, 0.728 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "custom painted
+ shell"
+
+[node name="Line2D" type="Line2D" parent="Scene9/shell"]
+points = PoolVector2Array( 350.254, 125, 695.432, 273.352 )
+default_color = Color( 0, 0, 0, 1 )
+
+[node name="mean" type="Label" parent="Scene9"]
+visible = false
+margin_left = 116.0
+margin_top = 649.0
+margin_right = 833.0
+margin_bottom = 844.0
+rect_scale = Vector2( 0.788, 0.728 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "mean look"
+
+[node name="Line2D" type="Line2D" parent="Scene9/mean"]
+position = Vector2( -532.515, 32.5682 )
+scale = Vector2( 2.02608, 0.57109 )
+points = PoolVector2Array( 515.229, 41.2088, 567.259, -78.2967 )
+default_color = Color( 0, 0, 0, 1 )
+
+[node name="arms" type="Label" parent="Scene9"]
+visible = false
+margin_left = 1258.0
+margin_top = 664.0
+margin_right = 1987.0
+margin_bottom = 859.0
+rect_scale = Vector2( 0.788, 0.728 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "No arms"
+
+[node name="Line2D" type="Line2D" parent="Scene9/arms"]
+points = PoolVector2Array( -12.6904, 61.8133, -220.812, 30.2198 )
+default_color = Color( 0, 0, 0, 1 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="TextTween" type="Tween" parent="."]
+
+[node name="lastSceneTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="shakeCamera" parent="." instance=ExtResource( 12 )]
+position = Vector2( 949, 541 )
+current = true
+
+[node name="Enter" type="Label" parent="."]
+visible = false
+margin_left = 1437.0
+margin_top = 33.0
+margin_right = 1986.0
+margin_bottom = 129.0
+rect_scale = Vector2( 0.752, 0.761 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Press enter"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enter"]
+autoplay = "blink"
+anims/RESET = SubResource( 1 )
+anims/blink = SubResource( 2 )
+
+[node name="prologueMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = -12.0
+
+[connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]
+[connection signal="tween_completed" from="TextTween" to="." method="_on_TextTween_tween_completed"]
+[connection signal="timeout" from="lastSceneTimer" to="." method="_on_lastSceneTimer_timeout"]
